@@ -3,7 +3,7 @@ function validarCpf() {
 
     let cpfNumerico = cpf.replace(/\D/g, "");  // remove os caracteres q não são nomors
 
-    if (cpfNumerico.length !== 11) {
+    if (cpfNumerico.length < 11 || cpfNumerico.length > 11) {
         document.getElementById("resposta").innerText = "issae se quer é um cpf 🥲, refassa plz.";
         document.getElementById("resposta").style.color = "#eb92be";
         resposta.style.visibility = "visible";
